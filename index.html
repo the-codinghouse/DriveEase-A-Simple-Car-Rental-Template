@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivEase - Premium Car Rental Services in India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add Google Fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span>DrivEase India</span>
+                </a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#featured-cars">Cars</a></li>
+                <li><a href="#why-choose-us">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="#booking-form" class="btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium Car Rental in India's Top IT Hubs</h1>
+                <p>Drive in comfort with our fleet of Indian cars at affordable prices.</p>
+                <div class="hero-btns">
+                    <a href="#featured-cars" class="btn-primary">Browse Cars</a>
+                    <a href="#why-choose-us" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-search" id="booking-form">
+                <h2>Find Your Perfect Ride</h2>
+                <form class="search-form">
+                    <div class="form-group location-group">
+                        <label class="location-group-title">Pickup Location</label>
+                        <div class="location-inputs">
+                            <div class="location-input-item">
+                                <label for="pickup-state">State</label>
+                                <select id="pickup-state" required>
+                                    <option value="">Select State</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                </select>
+                            </div>
+                            <div class="location-input-item">
+                                <label for="pickup-city">City</label>
+                                <select id="pickup-city" required>
+                                    <option value="">Select City</option>
+                                    <!-- Cities will be populated based on state selection -->
+                                </select>
+                            </div>
+                            <div class="location-input-item location-input-full">
+                                <label for="pickup-address">Specific Location</label>
+                                <input type="text" id="pickup-address" placeholder="Enter area, landmark, etc." required>
+                                <button type="button" id="current-location-btn" class="location-btn">
+                                    <i class="fas fa-map-marker-alt"></i> Current Location
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="trip-type">Trip Type</label>
+                        <select id="trip-type" required>
+                            <option value="in-city">Within City</option>
+                            <option value="out-city">Outstation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-date">Pickup Date</label>
+                        <input type="date" id="pickup-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="return-date">Return Date</label>
+                        <input type="date" id="return-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="car-type">Car Type</label>
+                        <select id="car-type">
+                            <option value="">Any Type</option>
+                            <option value="hatchback">Hatchback</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="mpv">MPV</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary btn-search">Search Cars</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Cars Section -->
+        <section class="featured-cars" id="featured-cars">
+            <div class="container">
+                <h2 class="section-title">Featured Indian Cars</h2>
+                <p class="section-description">Choose from our selected premium vehicles</p>
+                
+                <div class="car-grid">
+                    <!-- Car cards will be dynamically inserted here by JavaScript -->
+                    <!-- Skeleton loader for better UX -->
+                    <div class="car-card skeleton">
+                        <div class="car-image skeleton-image"></div>
+                        <div class="car-info">
+                            <div class="skeleton-line-thick"></div>
+                            <div class="car-features">
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                            </div>
+                            <div class="skeleton-line-thick"></div>
+                            <div class="skeleton-button"></div>
+                        </div>
+                    </div>
+                    <div class="car-card skeleton">
+                        <div class="car-image skeleton-image"></div>
+                        <div class="car-info">
+                            <div class="skeleton-line-thick"></div>
+                            <div class="car-features">
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                            </div>
+                            <div class="skeleton-line-thick"></div>
+                            <div class="skeleton-button"></div>
+                        </div>
+                    </div>
+                    <div class="car-card skeleton">
+                        <div class="car-image skeleton-image"></div>
+                        <div class="car-info">
+                            <div class="skeleton-line-thick"></div>
+                            <div class="car-features">
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                            </div>
+                            <div class="skeleton-line-thick"></div>
+                            <div class="skeleton-button"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="view-all-container">
+                    <a href="#" class="btn-secondary">View All Cars</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us" id="why-choose-us">
+            <div class="container">
+                <h2 class="section-title">Why Choose DrivEase India</h2>
+                <p class="section-description">We provide the best car rental service across India's top IT hubs</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Top Indian Brands</h3>
+                        <p>Our fleet features the latest models from Tata, Mahindra, Maruti Suzuki, and other trusted Indian brands for reliability and performance.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3>Best Price Guarantee</h3>
+                        <p>We offer the most competitive rates in the Indian market. Found a better price? We'll match it and give you an extra 5% off.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Customer Support</h3>
+                        <p>Our dedicated team is available round the clock to assist you with any queries or issues you might encounter anywhere in India.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>IT Hub Locations</h3>
+                        <p>With pickup and drop-off points across all major Indian IT hubs including Mumbai, Bangalore, Pune, Hyderabad, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-description">Hear from our satisfied clients across India</p>
+                
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Amazing service! The Tata Nexon was in pristine condition and the whole rental process was smooth and hassle-free in Bangalore."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Priya Sharma">
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>IT Professional, Bangalore</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"I've been renting from DrivEase for my weekend trips from Mumbai to Pune, and they never disappoint. The pricing is transparent and the cars are always top-notch."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rajesh Patel">
+                            <div class="author-info">
+                                <h4>Rajesh Patel</h4>
+                                <p>Software Engineer, Mumbai</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The customer service at DrivEase is exceptional. When I had a flat tire during my trip to Delhi, they sent help within 30 minutes and had me back on the road in no time."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Neha Gupta">
+                            <div class="author-info">
+                                <h4>Neha Gupta</h4>
+                                <p>IT Consultant, Hyderabad</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button id="prevTestimonial" class="testimonial-control"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextTestimonial" class="testimonial-control"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Explore India?</h2>
+                    <p>Book your car now and get 15% off on your first rental with code: INDIAFIRST15</p>
+                    <a href="#booking-form" class="btn-primary">Book Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span>DrivEase India</span>
+                    </div>
+                    <p>Your trusted partner for car rentals in India's top IT hubs. We've been providing premium services since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#why-choose-us">About Us</a></li>
+                        <li><a href="#featured-cars">Car Fleet</a></li>
+                        <li><a href="#why-choose-us">Services</a></li>
+                        <li><a href="#footer">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Rental Types</h3>
+                    <ul class="footer-links">
+                        <li><a href="#booking-form">Within City</a></li>
+                        <li><a href="#booking-form">Outstation</a></li>
+                        <li><a href="#booking-form">Airport Transfer</a></li>
+                        <li><a href="#booking-form">Corporate Leasing</a></li>
+                        <li><a href="#booking-form">Long Term Rental</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 IT Park Road, Hinjewadi, Pune, India 411057</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-envelope"></i> info@driveeaseindia.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sun: 8:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 DrivEase Car Rentals India. All Rights Reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
